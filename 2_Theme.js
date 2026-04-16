@@ -199,4 +199,3 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 //Високосный год делится на 4, за исключением случаев, когда он делится на 100, но 
 //не на 400.
 
-
