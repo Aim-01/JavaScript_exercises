@@ -354,4 +354,142 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // }
 /////////////////////////////////////////////////////////////////////////////////////
 
+// 13. 
+
+// Description:
+// Create a function that accepts a parameter representing a name and 
+// returns the message: "Hello, <name> how are you doing today?".
+
+// [Make sure you type the exact thing I wrote or the program may not execute properly]
+
+// let name_input = "Lola";
+
+// console.log("Hello, " + name_input + "how are you doing today?" );
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+//14. https://www.codewars.com/kata/583f158ea20cfcbeb400000a
+// Description: Given two numbers and an arithmetic operator 
+// (the name of it, as a string), return the result of the two
+//  numbers having that operator used on them.
+
+// a and b will both be positive integers, and a will always be 
+// the first number in the operation, and b always the second.
+
+//The four operators are "add", "subtract", "divide", "multiply".
+
+// A few examples:(Input1, Input2, Input3 --> Output)
+
+//5, 2, "add"      --> 7
+// 5, 2, "subtract" --> 3
+
+// 5, 2, "multiply" --> 10
+// 5, 2, "divide"   --> 2.5
+
+// {let a = 5;
+// let b = 2;
+// let operatorADD = a + b;
+// let operatorSUBTRACT = a - b;
+// let operatorMULTIPLY = a * b;
+// let operatorDIVIDE = a / b;
+
+// console.log(operatorADD);
+// console.log(operatorSUBTRACT);
+// console.log(operatorMULTIPLY);
+// console.log(operatorDIVIDE);}
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+//15
+// Description:
+// We need a simple function that determines if a plural is needed or not. It 
+// should take a number, and return true if a plural should be used with 
+// that number or false if not. This would be useful when printing out a
+//  string such as 5 minutes, 14 apples, or 1 sun.
+
+// You only need to worry about english grammar rules for this kata, 
+// where anything that isn't singular (one of something), it is plural (not one of something).
+
+// All values will be positive integers or floats, or zero.
+
+// let n = 5
+//   if (n === 1) {
+//     console.log("false");
+//   } else {
+//     console.log("true");
+//   }
+
+
+ /////////////////////////////////////////////////////////////////////////////////////
+
+// 16 
+// https://www.codewars.com/kata/554003323fd6af1c4200004e
+
+//Description:
+//Create a function that checks if a number is odd.
+
+//Expect negative and decimal numbers too. Remember... 
+// all negative numbers can also be either odd or even.
+
+//Decimal numbers always return false
+
+//////
+
+// let n = 4;
+ 
+//         // если число целое, проверяем остаток от деления на 2
+//         if (n % 2 !== 0) {
+//             console.log("true");  // нечётное
+//         } else {
+//             console.log("false"); // чётное
+//         }
+    
+/////////////////////////////////////////////////////////////////////
+
+// 17
+// https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3  
+
+// let chasti_FI = "Sam Harris";
+// let iniciali = chasti_FI.split(" ");
+
+// if (iniciali.length === 2){
+//     let initsial1 = chasti_FI[0] [0].toUpperCase();
+//     let initsial2 = chasti_FI[1] [0].toUpperCase();
+//     console.log("Инициалы для " + chasti_FI + " = " + initsial1 + "." + initsial2);
+//     }
+
+//////////////////////////////////////////////////////////////////////
+
+// 18
+// https://www.codewars.com/kata/55908aad6620c066bc00002a
+
+// Description:
+// Check to see if a string has the same amount of 'x's and 'o's. 
+// The method must return a boolean and be case insensitive. 
+// The string can contain any char.
+
+//////
+
+// let strng = "Somebome"
+// let str = strng.toLowerCase;
+// let countX = 0;
+// let countO = 0;
+
+// for (let i = 0; i < strng.lengt; i++) {
+//     if (str[i] === "x") {
+//         countX++;
+//     } 
+//     else if (str[i] === "o" ){
+//         countO++;
+//     }
+// }
+
+// if (countX === countO) {
+//     console.log("true");
+// } else {
+//     console.log("false");
+// }
 
