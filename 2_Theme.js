@@ -9,20 +9,20 @@ const { Children } = require("react");
 let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 
 // Методы:
-//s.charAt(); //или с[0] // -  выводит в терминал по 1ой букве в зависимости от её позиции по номеру, начиная с 0
-//s.charAt(s.length -1); // -   буквы с конца стринги при записи "-хх"
-//s.substring(1, 15); // -   промежутки из стринги, которые задаются числами (между первой и 15ой)
-//s.substr(1, 9); // - устарел и не работает у меня, то же самое что и substring
-// s.slice(-3); // -  с конца стринги символы, отрезая левую часть
-// s.indexOf('l'); -  номер индекса по первому совпадению поиска с начала строки
-// s.lastIndexOf('l'); -  номер индекса по последнему совпадению поиска с начала строки
-// s.split(“of”); - создаёт новый массив [], разделяет по "of"(можно по запятой или по точке), оф удаляет
-// // s.replace(“l”, “L”); - замена первого совпадения внутри переменной стринги с 'l' на 'L'
-// s.replaceAll(“l”, “L”); - замена всех совпадений внутри переменной стринги с 'l' на 'L'
-// s.toUpperCase(); - всё в капс в стринге
-// s.toLowerCase(); - всё в строчные в стринге
+s.charAt(); //или с[0] // -  выводит в терминал по 1ой букве в зависимости от её позиции по номеру, начиная с 0
+s.charAt(s.length -1); // -   буквы с конца стринги при записи "-хх"
+s.substring(1, 15); // -   промежутки из стринги, которые задаются числами (между первой и 15ой)
+s.substr(1, 9); // - устарел и не работает у меня, то же самое что и substring
+s.slice(-3); // -  с конца стринги символы, отрезая левую часть
+s.indexOf('l'); //-  номер индекса по первому совпадению поиска с начала строки
+s.lastIndexOf('l'); //-  номер индекса по последнему совпадению поиска с начала строки
+s.split(“of”); //- создаёт новый массив [], разделяет по "of"(можно по запятой или по точке), оф удаляет
+s.replace(“l”, “L”); //- замена первого совпадения внутри переменной стринги с 'l' на 'L'
+s.replaceAll(“l”, “L”); //- замена всех совпадений внутри переменной стринги с 'l' на 'L'
+s.toUpperCase(); //- всё в капс в стринге
+s.toLowerCase(); //- всё в строчные в стринге
 
-//console.log(s.toLowerCase());
+console.log(s.toLowerCase());
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -30,69 +30,69 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 
 
 // var monthNumber = 1;
-// var result3;
+var result3;
 
-// switch (monthNumber) {
-//      case 1:
-//           result3 = "January";
-//           console.log(result3);
-//           break;
-//      case 2:
-//           result3 = "February";
-//           console.log(result3);
-//           break;
-//      case 3:
-//           result3 = "March";
-//           console.log(result3);
-//           break;
-//      case 4:
-//           result3 = "April";
-//           console.log(result3);
-//           break;
-//      case 5:
-//           result3 = "May";
-//           console.log(result3);
-//           break;
-//      case 6:
-//           result3 = "June";
-//           console.log(result3);
-//           break
-// }
+switch (monthNumber) {
+     case 1:
+          result3 = "January";
+          console.log(result3);
+          break;
+     case 2:
+          result3 = "February";
+          console.log(result3);
+          break;
+     case 3:
+          result3 = "March";
+          console.log(result3);
+          break;
+     case 4:
+          result3 = "April";
+          console.log(result3);
+          break;
+     case 5:
+          result3 = "May";
+          console.log(result3);
+          break;
+     case 6:
+          result3 = "June";
+          console.log(result3);
+          break
+}
 
 ///////////////////////////////////////////////////////////////////
 
 // 4. В этом коде что-то не так. Найдите ошибки, покажите какие и переделайте код, чтобы он работал правильно:
 
 
-// let day = "monday";
-// let message;
+let day = "monday";
+let message;
 
-// if (day == "Monday") {
-//      message = "It's Monday!";
-// } 
-// else if (day == "Tuesday") {
-//      message = "It's Tuesday!";
-// } 
-// else if (day == "Wednesday") {
-//      message = "It's Wednesday!";
-// } 
-// else if (day == "Thursday") {
-//      message = "It's Thursday!";
-// } 
-// else if (day == "Friday") {
-//      message = "It's Friday!";
-// } 
-// else if (day == "Saturday") {
-//      message = "It's Saturday!";
-// } 
-// else if (day == "Sunday") {
-//      message = "It's Sunday!";
-// } 
-// else {
-//      message = "Invalid day!";
-// }
+if (day == "Monday") {
+     message = "It's Monday!";
+} 
+else if (day == "Tuesday") {
+     message = "It's Tuesday!";
+} 
+else if (day == "Wednesday") {
+     message = "It's Wednesday!";
+} 
+else if (day == "Thursday") {
+     message = "It's Thursday!";
+} 
+else if (day == "Friday") {
+     message = "It's Friday!";
+} 
+else if (day == "Saturday") {
+     message = "It's Saturday!";
+} 
+else if (day == "Sunday") {
+     message = "It's Sunday!";
+} 
+else {
+     message = "Invalid day!";
+}
 
-// console.log(message);
+console.log(message);
 
 
 ////////////////////////////////////////////////////////////
@@ -100,40 +100,40 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // 5. Используя switch, напишите программу перевода дней недели из цифр 
 // в названия (перевести дни 1-7 в Пон-Вос).
 
-// var dayOfWeek = 4;
-// var dayName;
+var dayOfWeek = 4;
+var dayName;
 
-// switch (dayOfWeek) {
-//      case 1:
-//           dayName = "Пон";
-//           console.log(dayName);
-//           break;
-//      case 2:
-//           dayName = "Вт";
-//           console.log(dayName);
-//           break;
-//      case 3:
-//           dayName = "Ср";
-//           console.log(dayName);
-//           break;
-//      case 4:
-//           dayName = "Чт";
-//           console.log(dayName);
-//           break;
-//      case 5:
-//           dayName = "Пт";
-//           console.log(dayName);
-//           break;
-//     case 6:
-//           dayName = "Сб";
-//           console.log(dayName);
-//           break;
+switch (dayOfWeek) {
+     case 1:
+          dayName = "Пон";
+          console.log(dayName);
+          break;
+     case 2:
+          dayName = "Вт";
+          console.log(dayName);
+          break;
+     case 3:
+          dayName = "Ср";
+          console.log(dayName);
+          break;
+     case 4:
+          dayName = "Чт";
+          console.log(dayName);
+          break;
+     case 5:
+          dayName = "Пт";
+          console.log(dayName);
+          break;
+    case 6:
+          dayName = "Сб";
+          console.log(dayName);
+          break;
 
-//      case 7:
-//           dayName = "Вос";
-//           console.log(dayName);
-//           break
-// }
+     case 7:
+          dayName = "Вос";
+          console.log(dayName);
+          break
+}
 
 
 ///////////////////////////////////////////////////////////////////
@@ -143,22 +143,18 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 //  показать - “approved”, если другие месяцы, то - “denied”.
 
 
-// let monthN = "Deceber";
-// let message;
+let monthN = "August";
+let message;
 
-// if (monthN == "July") {
-//      message = "Approved!";
-// } 
-// else if (monthN == "Tuesday") {
-//      message = "It's Tuesday!";
-// } 
+if (monthN == "July" || monthN == "August") {
+     message = "Approved!";
+}
 
+else {
+     message = "DENIED !";
+}
 
-// else {
-//      message = "DENIED !";
-// }
-
-// console.log(message);
+console.log(message);
 
 //////////////////////////////////////////////////////////////////////
 
@@ -169,30 +165,30 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // положительными, отрицательными, дробными и т.д.
 
 
-// let a = 4.8;
-// let b = 2;
+let a = 4.8;
+let b = 2;
 
 
-// let operator = "/";
+let operator = "/";
 
-// if (operator == "+") {
-//      console.log(a+b);
-// } 
-// else if (operator == "-") {
-//      console.log(a-b);
-// } 
-// else if (operator == "*") {
-//      console.log(a*b);
-// } 
-// else if (operator == "/") {
-//      console.log(a/b);
-// } 
+if (operator == "+") {
+     console.log(a+b);
+} 
+else if (operator == "-") {
+     console.log(a-b);
+} 
+else if (operator == "*") {
+     console.log(a*b);
+} 
+else if (operator == "/") {
+     console.log(a/b);
+} 
 
-// else {
-//      console.log("Недопустимый оператор!");
-// }
+else {
+     console.log("Недопустимый оператор!");
+}
 
-// console.log("=" + a + operator + b);
+console.log("=" + a + operator + b);
 
 /////////////////////////////////////////////////////////////////
 
@@ -201,14 +197,14 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 //Високосный год делится на 4, за исключением случаев, когда он делится на 100, но 
 //не на 400.
 
-// let year_input = 2024;
+let year_input = 2024;
 
 
-// if (year_input % 4 === 0 && year_input % 100 !== 0 || (year_input % 400 === 0) ) {     // % 4 вычислят остаток при делении на 4
-//    console.log(year_input + " - високосный год");
-// } else {
-//    console.log(year_input + " - невисокосный год");
-// }
+if (year_input % 4 === 0 && year_input % 100 !== 0 || (year_input % 400 === 0) ) {     // % 4 вычислят остаток при делении на 4
+   console.log(year_input + " - високосный год");
+} else {
+   console.log(year_input + " - невисокосный год");
+}
 
 /////////////////////////////////////////////////////////////////////
 
@@ -219,32 +215,34 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // Пожилые (после 65) - скидка в 15%
 // Студенты - скидка в 10%
 
-// let vozrast_posetitelya = "студент";
-// let ticketPrice = 100;
-// let discount = " скидка)";
+let vozrast_posetitelya = 3; // ввод возраста
+let isStudent = "нет"; // варианты переменной ("студент" и "нет")
+let ticketPrice = 100;
+let discount = " скидка)";
 
 // допустим, студент это элемент выпадающего списка возрвста и находится в самом верху 
 // поиска, так как условие "студент" не прописано однеозначно
 
-// if (vozrast_posetitelya === "студент"){
-//     console.log((ticketPrice - (ticketPrice * 10 / 100)) + " BYN " +  " (10%" + discount + " студент");
-// }
+if (vozrast_posetitelya > 65 ){
+        console.log("Стоимость билета: " + (ticketPrice - (ticketPrice * 15 / 100)) + " BYN " + "(15% " + discount +" пенсионер" )
+    
+}
 
-// else if (vozrast_posetitelya <= 2 && vozrast_posetitelya !== "студент"){
-//     console.log("Стоимость билета: Бесплатное посещение");
-// }
+else if (vozrast_posetitelya <= 2 && isStudent !== "студент"){
+    console.log("Стоимость билета: Бесплатное посещение");
+}
 
-// else if (vozrast_posetitelya > 2 && vozrast_posetitelya <= 10 && vozrast_posetitelya !== "студент"){
-//         console.log("Стоимость билета: " + (ticketPrice /2) + " BYN " +  " (50%" + discount);
-// }
+else if (vozrast_posetitelya > 2 && vozrast_posetitelya <= 10 && isStudent !== "студент"){
+        console.log("Стоимость билета: " + (ticketPrice /2) + " BYN " +  " (50%" + discount);
+}
 
-// else if (vozrast_posetitelya > 10 && vozrast_posetitelya <= 65 && vozrast_posetitelya !== "студент"){
-//         console.log("Стоимость билета: " + ticketPrice + " BYN");
-// }
+else if (vozrast_posetitelya > 10 && vozrast_posetitelya <= 65 && isStudent !== "студент"){
+        console.log("Стоимость билета: " + ticketPrice + " BYN");
+}
 
-// else if (vozrast_posetitelya > 65 && vozrast_posetitelya !== "студент"){
-//         console.log("Стоимость билета: " + (ticketPrice - (ticketPrice * 15 / 100)) + " BYN " + "(15% " + discount +" пенсионер" );
-// }
+else if (isStudent == "студент" ){
+    console.log((ticketPrice - (ticketPrice * 10 / 100)) + " BYN " +  " (10%" + discount + " студент");;
+}
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -255,27 +253,27 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 
 
 
-// let stena = 5;      // высота стены
-// let den_metr = 3;       // поднимается за день
-// let noch_metr = 2;   // сползает за ночь
+let stena = 5;      // высота стены
+let den_metr = 3;       // поднимается за день
+let noch_metr = 2;   // сползает за ночь
 
-// let metry = 0;    // сколько уже проползла
-// let dni = 0;        // счётчик дней
+let metry = 0;    // сколько уже проползла
+let dni = 0;        // счётчик дней
 
-// while (metry < stena) {
-//     metry = metry + den_metr; // прибавление дневных метров
+while (metry < stena) {
+    metry = metry + den_metr; // прибавление дневных метров
 
-//     if (metry >= stena) {
-//         break; // достигла вершины
-//     }
+    if (metry >= stena) {
+        break; // достигла вершины
+    }
 
-//     metry = metry - noch_metr; // ночь
-//     dni = dni + 1;
-// }
+    metry = metry - noch_metr; // ночь
+    dni = dni + 1;
+}
 
-// dni = dni + 1; // последний день, когда долезла
+dni = dni + 1; // последний день, когда долезла
 
-// console.log("Улитка доползёт за " + dni + " дней");
+console.log("Улитка доползёт за " + dni + " дней");
 
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -290,36 +288,36 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // Используйте подходящую комбинацию условий - if, else if, else - для решения задачи.
 
 
-// let kofe = "latte";   // latte, americano, cappuccino - можем прописывать
-// let size = "small";        // small, medium, large - прописываем в переменной
+let kofe = "latte";   // latte, americano, cappuccino - можем прописывать
+let size = "small";        // small, medium, large - прописываем в переменной
 
-// // Рецепты 
-// let recipe;
+// Рецепты 
+let recipe;
 
-// if (kofe === "latte") {
-//     recipe = "Эспрессо + молоко + пенка";
-// } else if (kofe === "americano") {
-//     recipe = "Эспрессо + вода";
-// } else if (kofe === "cappuccino") {
-//     recipe = "Эспрессо + много пены";
-// }
+if (kofe === "latte") {
+    recipe = "Эспрессо + молоко + пенка";
+} else if (kofe === "americano") {
+    recipe = "Эспрессо + вода";
+} else if (kofe === "cappuccino") {
+    recipe = "Эспрессо + много пены";
+}
 
-// // Цена по размеру
-// let price;
+// Цена по размеру
+let price;
 
-// if (size === "small") {
-//     price = 20;
-// } else if (size === "medium") {
-//     price = 30;
-// } else if (size === "large") {
-//     price = 40;
-// }
+if (size === "small") {
+    price = 20;
+} else if (size === "medium") {
+    price = 30;
+} else if (size === "large") {
+    price = 40;
+}
 
-// // Вывод результата
-// console.log("Ваш выбор: " + kofe);
-// console.log("Рецепт: " + recipe);
-// console.log("Размер: " + size);
-// console.log("Стоимость: " + price + " BYN");
+// Вывод результата
+console.log("Ваш выбор: " + kofe);
+console.log("Рецепт: " + recipe);
+console.log("Размер: " + size);
+console.log("Стоимость: " + price + " BYN");
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -334,24 +332,24 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // Если человек не является членом клуба, но посетил 5 или больше предыдущих мероприятий, он 
 // получает специальный VIP-пропуск.
 
-// let age = 18; // ввод возраста
-// let chlenstvo = "yes"; // ввод наличия членства
-// let visits_party = 3; // ввод количества мероприятий
+let age = 18; // ввод возраста
+let chlenstvo = "yes"; // ввод наличия членства
+let visits_party = 3; // ввод количества мероприятий
 
-// if ( age >= 18 && chlenstvo === "yes"){
-//     console.log("Allowed");
-// }
+if ( age >= 18 && chlenstvo === "yes"){
+    console.log("Allowed");
+}
 
-// else if(age >= 18 && chlenstvo !== "yes" && visits_party >= 3 && visits_party < 5 ){
-//     console.log("Allowed");
-// }
+else if(age >= 18 && chlenstvo !== "yes" && visits_party >= 3 && visits_party < 5 ){
+    console.log("Allowed");
+}
 
-// else if (age >= 18 && chlenstvo !== "yes" && visits_party >= 5 ){
-//      console.log("VIP- пропуск");
-// }
+else if (age >= 18 && chlenstvo !== "yes" && visits_party >= 5 ){
+     console.log("VIP- пропуск");
+}
 
-// else { console.log("DENIED !");
-// }
+else { console.log("DENIED !");
+}
 /////////////////////////////////////////////////////////////////////////////////////
 
 // 13. 
@@ -359,12 +357,11 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // Description:
 // Create a function that accepts a parameter representing a name and 
 // returns the message: "Hello, <name> how are you doing today?".
-
 // [Make sure you type the exact thing I wrote or the program may not execute properly]
 
-// let name_input = "Lola";
+let name_input = "Lola";
 
-// console.log("Hello, " + name_input + "how are you doing today?" );
+console.log("Hello, " + name_input + "how are you doing today?" );
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -387,17 +384,17 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 // 5, 2, "multiply" --> 10
 // 5, 2, "divide"   --> 2.5
 
-// {let a = 5;
-// let b = 2;
-// let operatorADD = a + b;
-// let operatorSUBTRACT = a - b;
-// let operatorMULTIPLY = a * b;
-// let operatorDIVIDE = a / b;
+{let a = 5;
+let b = 2;
+let operatorADD = a + b;
+let operatorSUBTRACT = a - b;
+let operatorMULTIPLY = a * b;
+let operatorDIVIDE = a / b;
 
-// console.log(operatorADD);
-// console.log(operatorSUBTRACT);
-// console.log(operatorMULTIPLY);
-// console.log(operatorDIVIDE);}
+console.log(operatorADD);
+console.log(operatorSUBTRACT);
+console.log(operatorMULTIPLY);
+console.log(operatorDIVIDE);}
 
 
 
@@ -415,12 +412,12 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 
 // All values will be positive integers or floats, or zero.
 
-// let n = 5
-//   if (n === 1) {
-//     console.log("false");
-//   } else {
-//     console.log("true");
-//   }
+let n = 5
+  if (n === 1) {
+    console.log("false");
+  } else {
+    console.log("true");
+  }
 
 
  /////////////////////////////////////////////////////////////////////////////////////
@@ -438,28 +435,28 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 
 //////
 
-// let n = 4;
+let n = 4;
  
-//         // если число целое, проверяем остаток от деления на 2
-//         if (n % 2 !== 0) {
-//             console.log("true");  // нечётное
-//         } else {
-//             console.log("false"); // чётное
-//         }
+        // если число целое, проверяем остаток от деления на 2
+        if (n % 2 !== 0) {
+            console.log("true");  // нечётное
+        } else {
+            console.log("false"); // чётное
+        }
     
 /////////////////////////////////////////////////////////////////////
 
 // 17
 // https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3  
 
-// let chasti_FI = "Sam Harris";
-// let iniciali = chasti_FI.split(" ");
+let chasti_FI = "Sam Harris";
+let iniciali = chasti_FI.split(" ");
 
-// if (iniciali.length === 2){
-//     let initsial1 = chasti_FI[0] [0].toUpperCase();
-//     let initsial2 = chasti_FI[1] [0].toUpperCase();
-//     console.log("Инициалы для " + chasti_FI + " = " + initsial1 + "." + initsial2);
-//     }
+if (iniciali.length === 2){
+    let initsial1 = chasti_FI[0] [0].toUpperCase();
+    let initsial2 = chasti_FI[1] [0].toUpperCase();
+    console.log("Инициалы для " + chasti_FI + " = " + initsial1 + "." + initsial2);
+    }
 
 //////////////////////////////////////////////////////////////////////
 
@@ -473,23 +470,23 @@ let s = "Knowledge of built-in JavaScript methods speeds up a tester’s work.";
 
 //////
 
-// let strng = "Somebome"
-// let str = strng.toLowerCase;
-// let countX = 0;
-// let countO = 0;
+let strng = "Somebome"
+let str = strng.toLowerCase;
+let countX = 0;
+let countO = 0;
 
-// for (let i = 0; i < strng.lengt; i++) {
-//     if (str[i] === "x") {
-//         countX++;
-//     } 
-//     else if (str[i] === "o" ){
-//         countO++;
-//     }
-// }
+for (let i = 0; i < strng.lengt; i++) {
+    if (str[i] === "x") {
+        countX++;
+    } 
+    else if (str[i] === "o" ){
+        countO++;
+    }
+}
 
-// if (countX === countO) {
-//     console.log("true");
-// } else {
-//     console.log("false");
-// }
+if (countX === countO) {
+    console.log("true");
+} else {
+    console.log("false");
+}
 

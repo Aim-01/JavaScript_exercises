@@ -7,19 +7,19 @@
 
 ////////////
 
-// const testerPositions = [
-//     "Quality Assurance Engineer",
-//     "Software Tester",
-//     "Test Automation Engineer",
-//     "Quality Analyst",
-//     "QA Tester",
-//     "Test Engineer",
-//     "Quality Control Analyst",
-// ];
+const testerPositions = [
+    "Quality Assurance Engineer",
+    "Software Tester",
+    "Test Automation Engineer",
+    "Quality Analyst",
+    "QA Tester",
+    "Test Engineer",
+    "Quality Control Analyst",
+];
 
 
-// testerPositions.push("SDET", "Lead SDET");
-// console.log(testerPositions);
+testerPositions.push("SDET", "Lead SDET");
+console.log(testerPositions);
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -45,63 +45,116 @@
 
 
 ///////////////////////////////////////////////////////////////////////////
+
 // 4
 //У вас есть массив со скобками. Количество элементов и последовательность может быть разной.
 // Нужно выяснить, у каждой ли скобки есть соответствующая пара (открывающая и закрывающая).
 // Решение должно работать для всех массивов внизу.
 
-// Первая последовательность: [ '(', ')', '(', ')', ')']
-// Вторая последовательность:  ['(', ')', '(', ')', '{', '(', '}', ')', 2, 'a']
-// Еще: ['(', ')', '(', '(', '(', ')', '}', '(', ')', ')']
+// Первая последовательность: [ '(', ')', '(', ')', ')'] // false
+// Вторая последовательность:  ['(', ')', '(', ')', '{', '(', '}', ')', 2, 'a'] // true
+// Еще: ['(', ')', '(', '(', '(', ')', '}', '(', ')', ')'] // false
 
 //////////////////////////////////////////////
 
-// let arr1 = [ '(', ')', '(', ')', ')'];
-// let arr2 =  ['(', ')', '(', ')', '{', '(', '}', ')', 2, 'a'];
-// let arr3 = ['(', ')', '(', '(', '(', ')', '}', '(', ')', ')'];
+let arr1 = [ '(', ')', '(', ')', ')'];
 
-// function isOK(arr1) {
-//     const stack = [];
-//     const pairs = {
-//         ')': '(',
-//         '}': '{',
-//         ']': '['
-//     };
+let count = 0; // счётчик скобок
+let result = true; // маркер результата
 
-//     for (let i = 0; i < arr1.length; i++) {
-//         let char = arr1[i];
+for (i=0; i < arr1.length; i++) { // цикл для обхода всего массива
+    let elementMassiva = arr1[i]; // определитель конкретного элемента в массиве
+    if ( elementMassiva === '(' ){
+         count = count+1; // если тру открывающаяся скобка, то +1 к счётчику
 
-//         // Если это открывающая скобка — кладём в счёт
-//         if (char === "'('" ||  char === "'{'" ||  char === '[') {
-//             stack.push(char);
-//         }
-//         // Если это закрывающая скобка — проверяем пару
-//         else if (char === ')' && char === '}' && char === "']'") {
-//             if (stack.length === 0 || stack.pop() !== pairs[char]) {
-//                 return false;
-//             }
-//         }
-//         // Остальные символы игнорируем
-//     }
+    }
+    else if (elementMassiva === ')') {
+        count = count -1; // если закрывающая скобка -1 от счётчика
+    }
+    
+    }
+    if (count !== 0){
+        result = false;    
+        }
+console.log(result);
 
-//     // Если счёт пуст — все пары закрыты
-//     return stack.length === 0;
-// }
+///////
 
-// console.log(isOK(arr1)); // false 
-// console.log(isOK(arr2)); // true
-// console.log(isOK(arr3)); // false 
+let arr2 =  ['(', ')', '(', ')', '{', '(', '}', ')', 2, 'a'];
 
+let count = 0; // счётчик скобок
+let result = true; // маркер результата
+
+for (i=0; i < arr2.length; i++) { // цикл для обхода всего массива
+    let elementMassiva = arr2[i]; // определитель конкретного элемента в массиве
+    if ( elementMassiva === '(' || elementMassiva === '{' ){
+         count = count+1; // если тру открывающаяся скобка, то +1 к счётчику
+    }
+    else if (elementMassiva === ')' || elementMassiva === '}') {
+        count = count -1; // если закрывающая скобка -1 от счётчика
+    }
+    
+    }
+    if (count !== 0){
+        result = false;    
+        }
+console.log(result);
+
+//////////
+
+let arr3 = ['(', ')', '(', '(', '(', ')', '}', '(', ')', ')'];
+
+let count_1 = 0; //количество открытых скобок
+let count_2 = 0; // количество закрытых скобоk
+let count_3 = 0; // количество открытых фигурных скобок
+let count_4 = 0; // количество закрытых игурных скобок
+
+for (let i = 0; i < arr3.length; i++) {
+    if (arr3[i] === '(') {
+        count_1++; //количество открытых скобок
+    }
+}
+console.log(count_1); // 4
+
+for (let i = 0; i < arr3.length; i++) {
+    if (arr3[i] === ')') {
+        count_2++; // количество закрытых скобоk
+    }
+}
+console.log(count_2);
+
+for (let i = 0; i < arr3.length; i++) {
+    if (arr3[i] === '{') {
+        count_4++; // количество открытых фигурных скобок
+    }
+}
+console.log(count_4);
+
+for (let i = 0; i < arr3.length; i++) {
+    if (arr3[i] === '}') {
+        count_3++; // количество закрытых игурных скобок
+    }
+} console.log(count_3);
+
+let total_amount_elements = arr3.length
+console.log(total_amount_elements);
+
+if ((count_1 - count_2) === 0 && (count_3 - count_4 === 0))  {
+    console.log('true');
+}
+else{
+    console.log('false');
+}
 /////////////////////////////////////////////////////////////////////////////////
 
 // 5
 // Найти самое маленькое число из массива [4, 81, 3, -12, 99, 14].
 
-// let arr_5 = [4, 81, 3, -12, 99, 14];
+let arr_5 = [4, 81, 3, -12, 99, 14];
 
-// let maxNum = Math.max(...arr_5);
+let maxNum = Math.max(...arr_5);
 
-// console.log(maxNum);
+console.log(maxNum);
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -109,42 +162,42 @@
 
 //Найти самое большое число из массива [4, 81, 3, -12, 99, 14].
 
-// let arr6 = [4, 81, 3, -12, 99, 14];
+let arr6 = [4, 81, 3, -12, 99, 14];
 
-// let sum = 0;
+let sum = 0;
 
-// for (let item of arr6) {
-//     if (Array.isArray(item)) {
-//         for (let num of item) {
-//             sum += num;
-//         }
-//     } else if (typeof item === "number") {
-//         sum += item;
-//     }
-// }
+for (let item of arr6) {
+    if (Array.isArray(item)) {
+        for (let num of item) {
+            sum += num;
+        }
+    } else if (typeof item === "number") {
+        sum += item;
+    }
+}
 
-// console.log(sum);
+console.log(sum);
 
 /////////////////////////////////////////////////////////////////////////////////////
 
 // 7
 // Найти сумму всех элементов массива [[1, 2], [3, 4, 5], [6, 7, 8], 9, [10], [0, 11], "Hello"].
 
-// let arr7 = [[1, 2], [3, 4, 5], [6, 7, 8], 9, [10], [0, 11], "Hello"]
+let arr7 = [[1, 2], [3, 4, 5], [6, 7, 8], 9, [10], [0, 11], "Hello"]
 
-// let sum = 0;
+let sum = 0;
 
-// for (let item of arr7) {
-//     if (Array.isArray(item)) {
-//         for (let num of item) {
-//             sum += num;
-//         }
-//     } else if (typeof item === "number") {
-//         sum += item;
-//     }
-// }
+for (let item of arr7) {
+    if (Array.isArray(item)) {
+        for (let num of item) {
+            sum += num;
+        }
+    } else if (typeof item === "number") {
+        sum += item;
+    }
+}
 
-// console.log(sum); 
+console.log(sum); 
 
 // ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -152,11 +205,11 @@
 
 // // При помощи цикла for выведите чётные числа от 2 до 10.
 
-// for (let i = 2; i <= 10; i++) {
-//     if (i % 2 === 0) {
-//         console.log(i);
-//     }
-// }
+for (let i = 2; i <= 10; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
@@ -168,28 +221,28 @@
 
 ////////////
 
-// let height = 5;     
-// let day = 3;      
-// let night = 2;  
+let height = 5;     
+let day = 3;      
+let night = 2;  
 
-// let distance = 0;    // сколько уже проползла
-// let days = 0;        // счётчик дней
+let distance = 0;    // сколько уже проползла
+let days = 0;        // счётчик дней
 
-// while (distance < height) {
+while (distance < height) {
    
-//     distance = distance + day;
-//     days = days + 1;
+    distance = distance + day;
+    days = days + 1;
 
-//     // Проверяем, достигла ли вершины
-//     if (distance >= height) {
-//         break;
-//     }
+    // Проверяем, достигла ли вершины
+    if (distance >= height) {
+        break;
+    }
 
-//     // Ночь: улитка сползает вниз
-//     distance = distance - night;
-// }
+    // Ночь: улитка сползает вниз
+    distance = distance - night;
+}
 
-// console.log("Улитка доползёт за " + days + " дней");
+console.log("Улитка доползёт за " + days + " дней");
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -237,15 +290,15 @@ for (let i = n - 1; i >= 1; i--) {
 
 /////////////////////////////////////////
 
-// let row = 5; // количество строк (высота треугольника)
+let row = 5; // количество строк (высота треугольника)
 
-// for (let i = 1; i <= row; i++) {
-//     let line = "";
-//     for (let j = 1; j <= i; j++) {
-//         line += "* ";
-//     }
-//     console.log(line);
-// }
+for (let i = 1; i <= row; i++) {
+    let line = "";
+    for (let j = 1; j <= i; j++) {
+        line += "* ";
+    }
+    console.log(line);
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
@@ -297,16 +350,16 @@ for (let i = rows; i >= 1; i--) {
 
 /////////////////////
 
-// let rows = 10; // количество строк
+let rows = 10; // количество строк
 
-// for (let i = rows; i >= 1; i--) {
-//     let spaces = " ".repeat((rows - i) * 2); // добавляем пробелы для смещения вправо
-//     let line = "";
-//     for (let j = 0; j < i; j++) {
-//         line += j + " ";
-//     }
-//     console.log(spaces + line);
-// }
+for (let i = rows; i >= 1; i--) {
+    let spaces = " ".repeat((rows - i) * 2); // добавляем пробелы для смещения вправо
+    let line = "";
+    for (let j = 0; j < i; j++) {
+        line += j + " ";
+    }
+    console.log(spaces + line);
+}
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -318,9 +371,9 @@ for (let i = rows; i >= 1; i--) {
 const numbers = [1, 2, 3, 4, 5];
     let sum = 0;
 
-    for (let i = 0; i < numbers.length; i++) {
-        if (i % 2 !== 0) {
-            sum += numbers[i];
+    for (let i = 0; i < numbers.length; i++) { // цикл проходит по индексам
+        if (i % 2 !== 0) {  // берутся элементы только с чётным индексом
+            sum += numbers[i]; // чётные суммируются
         }
     }
 
