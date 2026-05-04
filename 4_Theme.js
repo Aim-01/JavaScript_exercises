@@ -272,7 +272,8 @@ console.log("Расшифровано:", decrypted);
 // positive integer, is a number r which, when raised to the power n, yields x:
 
 //r * ( r n-times) = x
-// Given number n, such that n > 1, find if its 2nd root, 4th root and 8th root are all integers (fractional part is 0). Return true if yes, false if no.
+// Given number n, such that n > 1, find if its 2nd root, 4th root and 8th root are all 
+// integers (fractional part is 0). Return true if yes, false if no.
 
 // Examples
 // // 2nd root of 256 is 16
@@ -320,7 +321,8 @@ if (r2 !== null && r4 !== null && r8 !== null) {
 
 // https://www.codewars.com/kata/570bcd9715944a2c8e000009
 
-// Given a number n, draw stairs using the letter "I", n tall and n wide, with the tallest in the top left.
+// Given a number n, draw stairs using the letter "I", n tall and n wide, 
+// with the tallest in the top left.
 
 // For example n = 3 result in:
 
@@ -362,14 +364,17 @@ for (let i = 0; i < n; i++) {
 
 // There was a test in your class and you passed it. Congratulations!
 
-// But you're an ambitious person. You want to know if you're better than the average student in your class.
+// But you're an ambitious person. You want to know if you're better than 
+// the average student in your class.
 
-// You receive an array with your peers' test scores. Now calculate the average and compare your score!
+// You receive an array with your peers' test scores. Now calculate the 
+// average and compare your score!
 
 // Return true if you're better, else false!
 
 // Note:
-// Your points are not included in the array of your class's points. Do not forget them when calculating the average score!
+// Your points are not included in the array of your class's points. Do not 
+// forget them when calculating the average score!
 
 ////////
 
@@ -393,17 +398,25 @@ if (myPoints > average) { // сравниваем твой балл с сред�
 
 // 10
 // https://www.codewars.com/kata/5648b12ce68d9daa6b000099
-// There is a bus moving in the city which takes and drops some people at each bus stop.
+// There is a bus moving in the city which takes and drops some people 
+// at each bus stop.
 
-// You are provided with a list (or array) of integer pairs. Elements of each pair represent the number of people that get on the bus (the first item) and the number of people that get off the bus (the second item) at a bus stop.
+// You are provided with a list (or array) of integer pairs. Elements of 
+// each pair represent the number of people that get on the bus (the first 
+// item) and the number of people that get off the bus (the second item) at a bus stop.
 
-// Your task is to return the number of people who are still on the bus after the last bus stop (after the last array). Even though it is the last bus stop, the bus might not be empty and some people might still be inside the bus, they are probably sleeping there :D
+// Your task is to return the number of people who are still on the bus after
+//  the last bus stop (after the last array). Even though it is the last bus 
+// stop, the bus might not be empty and some people might still be inside the
+//  bus, they are probably sleeping there :D
 
 // Take a look on the test cases.
 
-// Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the returned integer can't be negative.
+// Please keep in mind that the test cases ensure that the number of people 
+// in the bus is always >= 0. So the returned integer can't be negative.
 
-// The second value in the first pair in the array is 0, since the bus is empty in the first bus stop.
+// The second value in the first pair in the array is 0, since the bus is 
+// empty in the first bus stop.
 
 /////////////////
 
@@ -463,15 +476,21 @@ console.log(average);
 
 // 12
 //  https://www.codewars.com/kata/58acfe4ae0201e1708000075
-// King Arthur and his knights are having a New Years party. Last year Lancelot was jealous of Arthur, because Arthur had a date and Lancelot did not, and they started a duel.
+// King Arthur and his knights are having a New Years party. Last year 
+// Lancelot was jealous of Arthur, because Arthur had a date and Lancelot
+//  did not, and they started a duel.
 
-// To prevent this from happening again, Arthur wants to make sure that there are at least as many women as men at this year's party. He gave you a list of integers of all the party goers.
+// To prevent this from happening again, Arthur wants to make sure that
+//  there are at least as many women as men at this year's party. He gave 
+// you a list of integers of all the party goers.
 
-// Arthur needs you to return true if he needs to invite more women or false if he is all set.
+// Arthur needs you to return true if he needs to invite more women or 
+// false if he is all set.
 
 // Input/Output
 // [input] integer array L ($a in PHP)
-// An array (guaranteed non-associative in PHP) representing the genders of the attendees, where -1 represents women and 1 represents men.
+// An array (guaranteed non-associative in PHP) representing the genders 
+// of the attendees, where -1 represents women and 1 represents men.
 
 // 2 <= L.length <= 50
 
@@ -509,9 +528,11 @@ console.log(needMoreWomen);
 
 // https://www.codewars.com/kata/5265326f5fda8eb1160004c8
 
-// We need a function that can transform a string into a number. What ways of achieving this do you know?
+// We need a function that can transform a string into a number. What 
+// ways of achieving this do you know?
 
-//Note: Don't worry, all inputs will be strings, and every string is a perfectly valid representation of an integral number.
+//Note: Don't worry, all inputs will be strings, and every string is a 
+// perfectly valid representation of an integral number.
 
 let numberr = 123;
 let str = numberr.toString(); 
@@ -521,14 +542,19 @@ let str = numberr.toString();
 // 14
 
 // Task
-// Coding in function infiniteLoop. function accept 3 parameters. The 1st parameter is arr, it's a 2D array,
-//  it contains three 1D array. The 2nd parameter is d ，it's a string. The 3rd parameter is n, it's a number.
+// Coding in function infiniteLoop. function accept 3 parameters. 
+// The 1st parameter is arr, it's a 2D array,
+//  it contains three 1D array. The 2nd parameter is d ，it's a
+//  string. The 3rd parameter is n, it's a number.
 
-// You can think of arr as a moat, the elements of arr like water constantly flow in. The direction 
-// of flow is controlled by the parameter d. The value of d can be "left" or "right". "left" means 
-// the "river" moves to the left. All elements in the 1D array are to the left moving n position, if
-//  beyond the bounds of the array and the element is moved to the tail on the left side of the array; 
-// if it exceeds the left boundary element would be moved to the tail of 3rd array(like a circle). Right
+// You can think of arr as a moat, the elements of arr like water 
+// constantly flow in. The direction 
+// of flow is controlled by the parameter d. The value of d can be 
+// "left" or "right". "left" means the "river" moves to the left. All 
+// elements in the 1D array are to the left moving n position, if
+//  beyond the bounds of the array and the element is moved to the 
+// tail on the left side of the array; if it exceeds the left boundary
+// element would be moved to the tail of 3rd array(like a circle). Right
 //  is also similar to the operation, but it is moving to the right.
 
 // Finally, return arr.
@@ -641,7 +667,8 @@ console.log(result);
 
 // sortIt([1,1,1,2,2,3]) should return [3,2,2,1,1,1]
 // because [1,1,1,2,2,3] has one 3, two 2 and three 1
-// conditions2: If the same number of elements, according to the number values(in descending order) for example:
+// conditions2: If the same number of elements, according to the number values(in 
+// descending order) for example:
 
 // sortIt([1,1,1,2,2,2,3,3,3]) should return [3,3,3,2,2,2,1,1,1]
 // because number of 3,2 and 1 both are three, then according to 3>2>1
@@ -777,7 +804,8 @@ console.log(newArr);
 // 19
 // https://www.codewars.com/kata/5413759479ba273f8100003d
 
-// Write a function reverse which reverses a list (or in clojure's case, any list-like data structure)
+// Write a function reverse which reverses a list (or in clojure's 
+// case, any list-like data structure)
 
 // (the dedicated builtin(s) functionalities are deactivated)
 //////////////

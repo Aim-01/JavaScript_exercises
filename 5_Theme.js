@@ -362,6 +362,3 @@ console.log(simplifyPath("/../")); // "/"
 console.log(simplifyPath("/.../a/../b/c/../d/./")); // "/.../b/d"
 
 
-
-
-
