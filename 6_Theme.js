@@ -215,11 +215,55 @@ console.log("Самый дорогой десерт:", mostExpensive.name, "-", 
 
 const library = [
     
-    { isbn: "SK001", name: "The Shining", author: "Stephen King", year: 1977, genre: "Horror", pages: 447, popularity: 5, firstLine: "Jack Torrance thought..."},
-    { isbn: "SK002", name: "It", author: "Stephen King", year: 1986, genre: "Horror", pages: 1138, popularity: 4, firstLine: "The terror began..."},
-    { isbn: "SK003", name: "Misery", author: "Stephen King", year: 1987, genre: "Thriller", pages: 320, popularity: 3, firstLine: "Paul Sheldon..."},
-    { isbn: "SK004", name: "Carrie", author: "Stephen King", year: 1974, genre: "Horror", pages: 199, popularity: 2, firstLine: "Carrie White..."},
-    { isbn: "SK005", name: "Pet Sematary", author: "Stephen King", year: 1983, genre: "Horror", pages: 374, popularity: 4, firstLine: "Louis Creed..."},
+    { isbn: "SK001", 
+        name: "The Shining", 
+        author: "Stephen King", 
+        year: 1977, 
+        genre: "Horror", 
+        pages: 447, 
+        popularity: 5, 
+        firstLine: "Jack Torrance thought..."
+    },
+
+    { isbn: "SK002", 
+        name: "It", 
+        author: "Stephen King", 
+        year: 1986, 
+        genre: "Horror", 
+        pages: 1138, 
+        popularity: 4, 
+        firstLine: "The terror began..."
+    },
+
+    { isbn: "SK003", 
+        name: "Misery", 
+        author: "Stephen King", 
+        year: 1987, 
+        genre: "Thriller", 
+        pages: 320, 
+        popularity: 3, 
+        firstLine: "Paul Sheldon..."
+    },
+
+    { isbn: "SK004", 
+        name: "Carrie", 
+        author: "Stephen King", 
+        year: 1974, 
+        genre: "Horror", 
+        pages: 199, 
+        popularity: 2, 
+        firstLine: "Carrie White..."
+    },
+
+    { isbn: "SK005", 
+        name: "Pet Sematary", 
+        author: "Stephen King", 
+        year: 1983, 
+        genre: "Horror", 
+        pages: 374, 
+        popularity: 4, 
+        firstLine: "Louis Creed..."
+    },
     
     { isbn: "MT001", name: "Adventures of Tom Sawyer", author: "Mark Twain", year: 1876, genre: "Adventure", pages: 274, popularity: 5, firstLine: "Tom!"},
     { isbn: "MT002", name: "Adventures of Huckleberry Finn", author: "Mark Twain", year: 1884, genre: "Adventure", pages: 366, popularity: 4, firstLine: "You don’t know..."},

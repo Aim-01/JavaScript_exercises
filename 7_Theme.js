@@ -158,9 +158,8 @@ class Person {
     // a. Выведите в console названия всех книг.
     // b. Выведите в console имена самой популярной книги каждого из авторов в читабельном формате
     // c. Отсортируйте библиотеку по году выпуска книг
-
     
-let library = [
+let libraryDitales = [
     
     { isbn: "SK001", name: "The Shining", author: "Stephen King", year: 1977, genre: "Horror", pages: 447, popularity: 5, firstLine: "Jack Torrance thought..."},
     { isbn: "SK002", name: "It", author: "Stephen King", year: 1986, genre: "Horror", pages: 1138, popularity: 4, firstLine: "The terror began..."},
@@ -181,6 +180,7 @@ let library = [
     { isbn: "AP005", name: "Руслан и Людмила", author: "Alexander Pushkin", year: 1820, genre: "Poem", pages: 200, popularity: 4, firstLine: "У лукоморья дуб зелёный..."}
 ];
 
+
 class Book { // создаём класс из библиотеки
     constructor({ isbn, name, author, year, genre, pages, popularity, firstLine }) {
         this.isbn = isbn;
@@ -194,28 +194,31 @@ class Book { // создаём класс из библиотеки
     }
 }
 
-let books = library.map(book => new Book(book));
+class Library {  // создаём класс с методами
+    constructor ( books = [] ){
+        this.books = books;  // присваиваем свойству объекта зисбукс значение параметра букс. Внутри класса Library будет храниться массив книг, доступный как library.books
+    }
 
-console.log("Все книги:");  // a. Вывести названия всех книг
-books.forEach(book => console.log(book.name));
+ // a. Вывести названия всех книг
+    printTitles() { // объявляем метод принттайтлс внутри класса лайбрари - метод будет выводить в названия всех книг
+        console.log("Все книги:");
+        this.books.forEach( book => console.log(book.name)); //  фрич пройдёт по всем книгам в библиотеке и выведет book.name для каждой книги название
+    }
 
-// b. Самая популярная книга каждого автора
-function mostPopularByAuthor(author) {
-    let authorBooks = books.filter(b => b.author === author);
-    return authorBooks.reduce((max, b) =>
-        b.popularity > max.popularity ? b : max
-    );
+    // b. Самая популярная книга каждого автора
+     mostPopularByAuthor(author){ // метод принимает параметр аутор (будет искать самую популярнуб книгу у автора)
+        let authorBooks = this.books.filter(b => b.author === author);
+    return authorBooks.reduce((max, b) => // функция, которая сравнивает текущую книгу b с текущим максимумом max.
+        b.popularity > max.popularity ? b : max); // если популярность b больше, чем у max, возвращаем b, иначе оставляем max. метод возвращает одну книгу — самую популярную среди книг этого автора.
+    console.log("Самая популярная книга Стивена Кинга:", mostPopularByAuthor("Stephen King").name);
+    console.log("Самая популярная книга Марка Твена:", mostPopularByAuthor("Mark Twain").name);
+    console.log("Самая популярная книга Александра Пушкина:", mostPopularByAuthor("Alexander Pushkin").name); 
+    }
+
+//c. Отсортируйте библиотеку по году выпуска книг
+     
+    sortByYear() { // объявляем метод - вернёт книги, отсортированные по году
+        return [...this.books].sort((a, b) => a.year - b.year); // this.books - создаёт копию массива, чтобы не менять оригинальный this.books, sort - сортируем копию массива. a.year - b.year — если результат < 0, a идёт раньше b; если > 0 — позже.
+    }
+
 }
-
-console.log("Самая популярная книга Стивена Кинга:", mostPopularByAuthor("Stephen King").name);
-console.log("Самая популярная книга Марка Твена:", mostPopularByAuthor("Mark Twain").name);
-console.log("Самая популярная книга Александра Пушкина:", mostPopularByAuthor("Alexander Pushkin").name);
-
-let sortedByYear = [...books].sort((a, b) => a.year - b.year);  // c. Сортировка по году выпуска
-
-console.log("Библиотека, отсортированная по году:");
-sortedByYear.forEach(book => console.log(`${book.year} - ${book.name}`));
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-
